@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import {useNavigation} from "@react-navigation/native"
 
 export default function Landing(){
+
+    const { navigate } = useNavigation(); 
 
     return(
         <View style={styles.container} >
@@ -17,7 +20,9 @@ export default function Landing(){
                 </TouchableOpacity>
 
 
-                <TouchableOpacity style={[styles.button, styles.buttonSecondary]}>
+                <TouchableOpacity 
+                onPress={() => navigate("Ensinar")}
+                style={[styles.button, styles.buttonSecondary]}>
                     <Image source={require('../assets/icons/aula.png')} />
                     <Text style={styles.buttonText}>Ensinar</Text>
                 </TouchableOpacity>
