@@ -14,7 +14,9 @@ export default function Landing(){
             <Text style={styles.subtitle}>o que deseja fazer?</Text>
             
             <View style={styles.buttonContainer}> 
-                <TouchableOpacity style={[styles.button, styles.buttonPrimary]}>
+                <TouchableOpacity 
+                onPress={() => navigate("Estudar")}
+                style={[styles.button, styles.buttonPrimary]}>
                     <Image source={require('../assets/icons/estudo.png')} />
                     <Text style={styles.buttonText}>Estudar</Text>
                 </TouchableOpacity>
